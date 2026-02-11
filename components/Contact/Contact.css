@@ -1,0 +1,135 @@
+/* OUTER WHITE FRAME */
+.contact-frame {
+  background: #f5f3ee;
+  padding: 24px;
+}
+
+/* DARK SECTION */
+.contact-section {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    #2a2926 0%,
+    #0f0f0f 70%
+  );
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 24px;
+}
+
+/* BIG TITLE */
+.contact-title {
+  color: #eae7dc;
+  font-size: clamp(56px, 8vw, 120px);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 80px;
+}
+
+/* FORM CARD */
+.contact-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* CARD TITLE */
+.contact-card h3 {
+  color: #eae7dc;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+/* FORM */
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* INPUTS */
+.contact-card input,
+.contact-card textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #eae7dc;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: rgba(234, 231, 220, 0.5);
+}
+
+/* BUTTON */
+.contact-card button {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #eae7dc;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contact-card button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MOBILE CONTACT ================= */
+@media (max-width: 768px) {
+
+  /* OUTER FRAME */
+  .contact-frame {
+    padding: 16px;
+  }
+
+  /* SECTION */
+  .contact-section {
+    min-height: auto;          /* 🔥 important for mobile */
+    padding: 80px 16px;
+  }
+
+  /* TITLE */
+  .contact-title {
+    font-size: clamp(40px, 12vw, 72px);
+    margin-bottom: 48px;
+  }
+
+  /* FORM CARD */
+  .contact-card {
+    padding: 24px;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+  }
+
+  /* INPUTS */
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  /* BUTTON */
+  .contact-card button {
+    padding: 14px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,135 @@
+.hero {
+  background: #f4f1ea;
+  color: #111;
+  padding: 140px 80px 200px;
+}
+
+/* BIG NAME */
+.hero-title {
+  font-size: clamp(72px, 14vw, 200px); /* ↓ reduced */
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  margin-bottom: 90px;
+  white-space: nowrap; /* keeps one line */
+}
+
+/* MAIN GRID */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 120px;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 420px;
+}
+
+.hero-arrow {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  color: #333;
+}
+
+.hero-contact {
+  background: #1a1a1a;
+  color: #f4f1ea;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 360px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.hero-right {
+  text-align: right;
+}
+
+.hero-right span {
+  font-size: 17px;
+  letter-spacing: 0.12em;
+  color: #555;
+}
+
+.hero-right h2 {
+  font-size: clamp(64px, 10vw, 120px); /* ↑ bigger */
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: 10px;
+}
+/* ================= MOBILE HERO ================= */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 100px 24px 120px;
+    min-height: 100vh;
+  }
+
+  /* NAME */
+  .hero-title {
+    font-size: clamp(48px, 16vw, 96px);
+    white-space: normal;          /* allow wrap */
+    margin-bottom: 48px;
+  }
+
+  /* GRID → STACK */
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  /* LEFT TEXT */
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-contact {
+    padding: 14px 24px;
+    font-size: 12px;
+  }
+
+  /* IMAGE */
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* RIGHT (AVAILABLE FOR WORK) */
+  .hero-right {
+    text-align: left;
+  }
+
+  .hero-right span {
+    font-size: 14px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-right h2 {
+    font-size: clamp(48px, 14vw, 96px);
+    margin-top: 6px;
+  }
+}

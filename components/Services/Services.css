@@ -1,0 +1,152 @@
+.services {
+  position: relative;
+  background: #0b0b0b;
+  color: #e6e3dc;
+  padding-top: 30vh;
+  padding-bottom: 20vh;
+  z-index: 10;
+}
+
+/* STICKY TITLE */
+
+.services-header h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* PANELS */
+.services {
+  position: relative;
+  background: #0b0b0b;
+  color: #e6e3dc;
+  padding: 25vh 6vw 20vh;
+}
+
+/* TWO COLUMN LAYOUT */
+.services-layout {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: flex-start;
+}
+
+/* LEFT STICKY TITLE */
+.services-header {
+  position: sticky;
+  top: 20vh;
+}
+
+.services-header h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* RIGHT PANELS */
+.services-panels {
+  display: flex;
+  flex-direction: column;
+}
+/* EACH PANEL */
+.service-panel {
+  min-height: 85vh;
+  padding: 8vh 6vw;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* NUMBER */
+.service-number {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+/* CONTENT */
+.service-content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.service-content p {
+  max-width: 520px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.service-content ul {
+  margin-top: 36px;
+  list-style: none;
+}
+
+.service-content li {
+  display: flex;
+  gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.05rem;
+}
+
+.service-content li span {
+  opacity: 0.4;
+}
+/* ================= MOBILE SERVICES ================= */
+@media (max-width: 768px) {
+
+  .services {
+    padding: 120px 24px;
+  }
+
+  /* STACK LAYOUT */
+  .services-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* REMOVE STICKY ON MOBILE */
+  .services-header {
+    position: relative;
+    top: auto;
+  }
+
+  .services-header h2 {
+    font-size: clamp(40px, 10vw, 64px);
+  }
+
+  /* PANELS */
+  .services-panels {
+    gap: 48px;
+  }
+
+  /* EACH PANEL */
+  .service-panel {
+    min-height: auto;          /* 🔥 critical */
+    padding: 40px 0;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* NUMBER */
+  .service-number {
+    font-size: 1.2rem;
+  }
+
+  /* CONTENT */
+  .service-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .service-content p {
+    font-size: 14px;
+  }
+
+  .service-content ul {
+    margin-top: 24px;
+  }
+
+  .service-content li {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}

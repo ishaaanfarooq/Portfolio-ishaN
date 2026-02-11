@@ -1,0 +1,163 @@
+/* ================= SECTION ================= */
+.works {
+  background: #000;
+  color: #eae7dc;
+  padding: 140px clamp(64px, 8vw, 140px);
+}
+
+/* ================= TOP HEADER ================= */
+.works-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 140px;
+}
+
+.works-title {
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 500;
+}
+
+.works-intro {
+  max-width: 380px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.works-content {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 100px;
+}
+
+/* ================= LEFT NUMBER ================= */
+.works-left {
+  position: sticky;
+  top: 140px;
+  height: fit-content;
+}
+
+.works-number {
+  font-size: clamp(140px, 22vw, 260px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ================= RIGHT PROJECTS ================= */
+.works-right {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+/* ================= SINGLE PROJECT ================= */
+.work-item {
+  max-width: 1100px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* TEXT ABOVE IMAGE */
+.work-text {
+  margin-bottom: 40px;
+}
+
+.work-text h4 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.work-text span {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.work-text p {
+  margin-top: 12px;
+  max-width: 540px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* IMAGE */
+.work-image img {
+  width: 100%;
+  height: min(70vh, 640px);
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+/* SUBTLE HOVER (ZUNED-STYLE) */
+.work-item:hover .work-image img {
+  transform: scale(1.02);
+}
+
+/* ================= MOBILE WORKS ================= */
+@media (max-width: 768px) {
+
+  .works {
+    padding: 120px 24px;
+  }
+
+  /* TOP HEADER */
+  .works-top {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+
+  .works-title {
+    font-size: clamp(40px, 10vw, 64px);
+  }
+
+  .works-intro {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* STACK MAIN LAYOUT */
+  .works-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* REMOVE STICKY NUMBER */
+  .works-left {
+    position: relative;
+    top: auto;
+  }
+
+  .works-number {
+    font-size: 72px;
+    margin-bottom: 24px;
+  }
+
+  /* PROJECT LIST */
+  .works-right {
+    gap: 80px;
+  }
+
+  .work-item {
+    max-width: 100%;
+  }
+
+  /* TEXT */
+  .work-text h4 {
+    font-size: 22px;
+  }
+
+  .work-text p {
+    font-size: 14px;
+  }
+
+  /* IMAGE */
+  .work-image img {
+    height: 40vh;
+    max-height: 420px;
+  }
+}

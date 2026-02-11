@@ -1,0 +1,42 @@
+.header {
+  position: relative;   /* ✅ IMPORTANT */
+  width: 100%;
+  padding: 32px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;            /* low z-index */
+  background: transparent;
+  color: #111;
+}
+
+
+.header-right a {
+  margin-left: 28px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.header-right a:hover {
+  opacity: 1;
+}
+
+/* ================= MOBILE HEADER ================= */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px 24px;
+  }
+
+  /* Hide desktop nav on mobile (Zuned-style) */
+  .header-right {
+    display: none;
+  }
+
+  .header-left {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+}
