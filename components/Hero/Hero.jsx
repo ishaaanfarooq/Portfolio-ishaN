@@ -42,7 +42,7 @@ export default function Hero() {
         {/* RIGHT AVAILABILITY */}
         <div className="hero-right">
           <span>AVAILABLE FOR WORK</span>
-          <h2>FEB’26</h2>
+          <h2>APR’26</h2>
         </div>
       </div>
     </section>
