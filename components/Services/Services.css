@@ -53,7 +53,15 @@
   padding: 8vh 6vw;
   display: grid;
   grid-template-columns: 200px 1fr;
+  
+  /* Card Stacking Effect */
+  position: sticky;
+  top: 20vh; /* matches header sticky top */
+  background: #0b0b0b;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.6);
+  transform-origin: center top;
 }
 
 /* NUMBER */
@@ -120,10 +128,14 @@
 
   /* EACH PANEL */
   .service-panel {
-    min-height: auto;          /* 🔥 critical */
-    padding: 40px 0;
+    min-height: auto;
+    padding: 40px 20px;
     grid-template-columns: 1fr;
     gap: 24px;
+
+    /* Stacking on mobile */
+    top: 10vh;
+    border-radius: 20px 20px 0 0;
   }
 
   /* NUMBER */

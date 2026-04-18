@@ -40,6 +40,12 @@
   color: #333;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
 .hero-contact {
   background: #1a1a1a;
   color: #f4f1ea;
@@ -49,6 +55,27 @@
   font-size: 13px;
   letter-spacing: 0.08em;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-resume {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  border-radius: 999px;
+  padding: 13px 28px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.hero-resume:hover {
+  background: #1a1a1a;
+  color: #f4f1ea;
+  border-color: #1a1a1a;
 }
 
 /* IMAGE */
@@ -106,7 +133,13 @@
     font-size: 15px;
   }
 
-  .hero-contact {
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-contact,
+  .hero-resume {
     padding: 14px 24px;
     font-size: 12px;
   }

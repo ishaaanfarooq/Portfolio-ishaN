@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Works.css";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const PROJECTS = [
   {
@@ -35,9 +41,11 @@ const PROJECTS = [
 
 export default function Works() {
   const sectionsRef = useRef([]);
+  const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    // 1. Active Index Scroll Tracker
     const handleScroll = () => {
       const viewportCenter = window.innerHeight * 0.65;
 
@@ -63,11 +71,44 @@ export default function Works() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    // 2. GSAP ScrollTrigger Animations
+    const ctx = gsap.context(() => {
+      // Animate the Header
+      gsap.from(".works-top", {
+        scrollTrigger: {
+          trigger: ".works",
+          start: "top 80%",
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      // Animate each Work Item
+      sectionsRef.current.forEach((el) => {
+        if (!el) return;
+        gsap.from(el, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+          y: 100,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+        });
+      });
+    }, containerRef);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      ctx.revert();
+    };
   }, []);
 
   return (
-    <section id="works" className="works">
+    <section id="works" className="works" ref={containerRef}>
       {/* TOP HEADER */}
       <div className="works-top">
         <h2 className="works-title">SELECTED WORKS /</h2>

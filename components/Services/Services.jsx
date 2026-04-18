@@ -13,23 +13,28 @@ export default function Services() {
   const panelsRef = useRef([]);
 
   useEffect(() => {
-  gsap.fromTo(
-    panelsRef.current,
-    { y: 18, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.15,
-      duration: 0.6,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-        once: true,
-      },
-    }
-  );
-}, []);
+    const ctx = gsap.context(() => {
+      panelsRef.current.forEach((panel, i) => {
+        if (!panel) return;
+        
+        // If it's not the last panel, animate it scaling down as the next one comes up
+        if (i < panelsRef.current.length - 1) {
+          gsap.to(panel, {
+            scale: 0.9,
+            opacity: 0.2, // dim the card
+            scrollTrigger: {
+              trigger: panel,
+              start: "top 20%",
+              end: "bottom 20%",
+              scrub: true,
+            },
+          });
+        }
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="services" ref={sectionRef} className="services">
