@@ -6,30 +6,30 @@ import "./Works.css";
 const PROJECTS = [
   {
     id: "01",
+    title: "Multi-Model RAG System",
+    subtitle: "AI Pipeline",
+    description:
+      "Built a Retrieval-Augmented Generation system using FastAPI, LangChain, FAISS, and Llama 3. Designed multi-model routing pipelines, implemented document embedding systems, and developed a real-time interface for pipeline execution.",
+    image: "/multi_model_rag.png",
+    github: "https://github.com/ishaaanfarooq/Multi-Model-RAG",
+  },
+  {
+    id: "02",
+    title: "ReWise AI",
+    subtitle: "Chrome Extension & Backend System",
+    description:
+      "Developed a system to capture highlighted content from webpages. Built asynchronous pipelines using Node.js, Redis, and LLM APIs. Integrated Google OAuth and MongoDB, and implemented automated weekly summaries for content revision.",
+    image: "/rewise_ai.png",
+    github: "https://github.com/ishaaanfarooq/ReWise.AI",
+  },
+  {
+    id: "03",
     title: "Portfolio Website",
     subtitle: "Design & Development",
     description:
       "A thoughtfully crafted personal portfolio focused on typography, motion, and smooth scrolling interactions.",
     image: "/ishanproject_1.png",
     github: "https://github.com/ishaaanfarooq/Portfolio-ishaN.git",
-  },
-  {
-    id: "02",
-    title: "Equity Research Analyst",
-    subtitle: "AI-Powered Market Analysis",
-    description:
-      "An intelligent research system enabling semantic search, real-time insights, and automated financial content analysis.",
-    image: "/ishanproject-2.png",
-    github: "https://github.com/ishaaanfarooq/Equity-Research-Analyst",
-  },
-  {
-    id: "03",
-    title: "Multilingual RAG-Based AI Assistant",
-    subtitle: "Production-Ready Knowledge Retrieval System",
-    description:
-      "A scalable, multilingual Retrieval-Augmented Generation system designed for real-world deployment, featuring hybrid retrieval, multi-agent verification, automatic language detection, and offline LLM inference for accurate, context-aware responses across multiple websites.",
-    image: "/ishanProj-3.png",
-    github: "https://github.com/ishaaanfarooq/College-Website-RAG-Chatbot",
   },
 ];
 
