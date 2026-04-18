@@ -99,65 +99,103 @@
 
 /* ================= MOBILE WORKS ================= */
 @media (max-width: 768px) {
-
   .works {
-    padding: 120px 24px;
+    padding: 80px 20px;
   }
 
   /* TOP HEADER */
   .works-top {
     flex-direction: column;
-    gap: 32px;
-    margin-bottom: 80px;
+    gap: 24px;
+    margin-bottom: 60px;
   }
 
   .works-title {
-    font-size: clamp(40px, 10vw, 64px);
+    font-size: clamp(36px, 10vw, 56px);
+    line-height: 1.1;
   }
 
   .works-intro {
     max-width: 100%;
-    font-size: 14px;
+    font-size: 15px;
+    color: rgba(234, 231, 220, 0.8);
   }
 
   /* STACK MAIN LAYOUT */
   .works-content {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0;
+    position: relative;
   }
 
-  /* REMOVE STICKY NUMBER */
+  /* WATERMARK NUMBER */
   .works-left {
-    position: relative;
-    top: auto;
+    position: sticky;
+    top: 100px;
+    height: 0;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .works-number {
-    font-size: 72px;
-    margin-bottom: 24px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    font-size: 180px;
+    font-weight: 700;
+    line-height: 0.7;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.04);
+    transition: opacity 0.3s ease;
   }
 
   /* PROJECT LIST */
   .works-right {
     gap: 80px;
+    z-index: 1;
+    position: relative;
   }
 
   .work-item {
     max-width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 
   /* TEXT */
+  .work-text {
+    margin-bottom: 0;
+  }
+
   .work-text h4 {
-    font-size: 22px;
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .work-text span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 12px;
   }
 
   .work-text p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-top: 0;
   }
 
   /* IMAGE */
   .work-image img {
-    height: 40vh;
-    max-height: 420px;
+    height: auto;
+    aspect-ratio: 4/3;
+    max-height: none;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
   }
 }
