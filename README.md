@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ishan Farooq - Software Engineer Portfolio
 
-## Getting Started
+A premium, highly interactive personal portfolio built focusing on high-performance animations, fluid typography, and premium digital design. This project serves as an interactive showcase of my technical expertise in AI systems, full-stack architectures, and robust backend engineering.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Fluid Animations & Micro-Interactions**: Features a custom `framer-motion` jelly-cursor with dynamic `mix-blend-mode` background contrast, alongside cinematic GSAP timelines for entry sequences.
+- **Dynamic Scroll Architectures**: Includes a highly polished CSS/GSAP overlapping card-stack pushback animation in the Services section, delivering deep 3D-like parallax layouts.
+- **Modern Architecture**: Engineered on cutting-edge React 19 and Next.js 16.1, leveraging the modern App Router and Turbopack.
+- **Serverless Communications**: Fully functioning contact form architecture powered by the `Resend` API handling server side mail dispatches.
+- **Premium Responsiveness**: Rigorously optimized CSS styling ensuring pristine layout shifts, aspect ratio locks, and animation transitions across all mobile and touch devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* **Core**: Next.js & React
+* **Styling**: Vanilla CSS, Flex/Grid layouts, custom media queries
+* **Animations**: GSAP (ScrollTrigger & core engine), Framer Motion
+* **Integrations**: Resend (Serverless Emailing)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Getting Started Locally
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ishaaanfarooq/Portfolio-ishaN.git
+   cd Portfolio-ishaN
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Configure Environment Variables**
+   Create a `.env.local` file at the root of the project to enable the contact form functionality:
+   ```env
+   RESEND_API_KEY="your_resend_api_key_here"
+   CONTACT_EMAIL="your_receiving_email_address_here"
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Open [http://localhost:3000](http://localhost:3000) with your browser to explore the portfolio interactively.
