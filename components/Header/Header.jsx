@@ -11,6 +11,7 @@ const Header = forwardRef(function Header(_, ref) {
       <nav className="header-right">
         <a href="#services">Services</a>
         <a href="#works">Works</a>
+        <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>

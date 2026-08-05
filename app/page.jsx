@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
 import Works from "@/components/Works/Works";
+import Experience from "@/components/Experience/Experience";
 import About2 from "@/components/About2/About2";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero headerRef={headerRef} />
       <Services />
       <Works />
+      <Experience />
       <About2 />
       <Contact />
       <Footer />
