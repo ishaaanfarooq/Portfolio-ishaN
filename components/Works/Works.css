@@ -84,11 +84,21 @@
 }
 
 /* IMAGE */
+.work-image {
+  /* Fixed frame matching the 16:9 screenshots, so every card is the same
+     size regardless of the source image's aspect ratio. */
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
 .work-image img {
   width: 100%;
-  height: min(70vh, 640px);
-  object-fit: cover;
-  border-radius: 14px;
+  height: 100%;
+  /* contain, not cover: a square source would otherwise lose ~40% off the
+     top and bottom. Letterboxing is invisible against the black frame. */
+  object-fit: contain;
   transition: transform 0.4s ease;
 }
 
@@ -191,10 +201,7 @@
   }
 
   /* IMAGE */
-  .work-image img {
-    height: auto;
-    aspect-ratio: 4/3;
-    max-height: none;
+  .work-image {
     border-radius: 16px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
   }
