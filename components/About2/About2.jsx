@@ -50,6 +50,8 @@ export default function About2() {
               <li className="skill-item">Redis</li>
               <li className="skill-item">Operating Systems</li>
               <li className="skill-item">System Design</li>
+              <li className="skill-item">Distributed Systems</li>
+              <li className="skill-item">Vector Databases</li>
             </ul>
 
           </div>

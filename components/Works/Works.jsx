@@ -15,7 +15,7 @@ const PROJECTS = [
     title: "Multi-Model RAG System",
     subtitle: "AI Pipeline",
     description:
-      "Built a Retrieval-Augmented Generation system using FastAPI, LangChain, FAISS, and Llama 3. Designed multi-model routing pipelines, implemented document embedding systems, and developed a real-time interface for pipeline execution.",
+      "Built a Retrieval-Augmented Generation system using FastAPI, LangChain, FAISS, and Llama 3. Engineered multi-model routing pipelines, implemented scalable document embedding workflows, and developed a real-time interface for seamless pipeline execution.",
     image: "/multi_model_rag.png",
     github: "https://github.com/ishaaanfarooq/Multi-Model-RAG",
   },
@@ -24,7 +24,7 @@ const PROJECTS = [
     title: "ReWise AI",
     subtitle: "Chrome Extension & Backend System",
     description:
-      "Developed a system to capture highlighted content from webpages. Built asynchronous pipelines using Node.js, Redis, and LLM APIs. Integrated Google OAuth and MongoDB, and implemented automated weekly summaries for content revision.",
+      "Developed a platform to capture highlighted content from webpages. Engineered asynchronous pipelines using Node.js, Redis, and LLM APIs. Integrated Google OAuth with MongoDB, and implemented automated weekly summaries for efficient content revision.",
     image: "/rewise_ai.png",
     github: "https://github.com/ishaaanfarooq/ReWise.AI",
   },
@@ -33,7 +33,7 @@ const PROJECTS = [
     title: "Portfolio Website",
     subtitle: "Design & Development",
     description:
-      "A thoughtfully crafted personal portfolio focused on typography, motion, and smooth scrolling interactions.",
+      "A thoughtfully designed personal portfolio showcasing typography, motion, and seamless scrolling interactions.",
     image: "/ishanproject_1.png",
     github: "https://github.com/ishaaanfarooq/Portfolio-ishaN.git",
   },

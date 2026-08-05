@@ -21,7 +21,7 @@ export default function Services() {
         if (i < panelsRef.current.length - 1) {
           gsap.to(panel, {
             scale: 0.9,
-            opacity: 0.2, // dim the card
+            opacity: 0.2, // dim the card and forcing it 
             scrollTrigger: {
               trigger: panel,
               start: "top 20%",
