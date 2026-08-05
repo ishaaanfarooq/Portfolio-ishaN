@@ -16,7 +16,7 @@ const PROJECTS = [
     subtitle: "AI Pipeline",
     description:
       "Built a Retrieval-Augmented Generation system using FastAPI, LangChain, FAISS, and Llama 3. Engineered multi-model routing pipelines, implemented scalable document embedding workflows, and developed a real-time interface for seamless pipeline execution.",
-    image: "/ishanproject-2.png",
+    image: "/multi_model_rag.png",
     github: "https://github.com/ishaaanfarooq/Multi-Model-RAG",
   },
   {
